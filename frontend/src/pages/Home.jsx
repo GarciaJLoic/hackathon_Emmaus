@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from "../assets/Logo.svg";
+import Logo from "../assets/logo.svg";
 import Connection from "../assets/connection.svg";
 
 export default function Home() {
