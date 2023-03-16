@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Ajout1 from "./pages/Ajout1";
 import Header from "./components/Header";
+import ConfigMini from "./components/ConfigMini";
 
 import "./styles/App.scss";
 
@@ -22,6 +23,7 @@ function App() {
           }
         /> */}
         <Route path="/header" element={<Header />} />
+        <Route path="/configmini" element={<ConfigMini />} />
       </Routes>
     </div>
   );
