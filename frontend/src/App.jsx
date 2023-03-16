@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 
+import Home from "./pages/Home";
 import Ajout1 from "./pages/Ajout1";
 
 import "./styles/App.scss";
@@ -8,7 +9,9 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route
+        <Route path="/" element={<Home />} />
+        <Route path="/ajout1" element={<Ajout1 />} />
+        {/* <Route
           path="/ajout1"
           element={
             <div>
@@ -16,7 +19,7 @@ function App() {
               <br />
             </div>
           }
-        />
+        /> */}
       </Routes>
     </div>
   );
