@@ -1,36 +1,31 @@
-import Counter from "../components/Counter";
-import logo from "../assets/logo.svg";
+import { Link } from "react-router-dom";
+import Logo from "../assets/logo.svg";
+import Connection from "../assets/connection.svg";
 
 export default function Home() {
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Hello Vite + React !</p>
-
-      <Counter />
-
-      <p>
-        Edit <code>App.jsx</code> and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {" | "}
-        <a
-          className="App-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </header>
+    <div className="backgroundHome">
+      <div className="blurHome">
+        <img src={Logo} alt="Emmaus Connect" className="logo" />
+        <div className="blurConnection">
+          <img
+            src={Connection}
+            alt="titre connection"
+            className="connectionTitre"
+          />
+          <div className="identification">
+            <p className="nomInput">Identifiant :</p>
+            <input type="text" className="enterInput" />
+          </div>
+          <div className="identification">
+            <p className="nomInput">Mot de passe :</p>
+            <input type="password" className="enterInput" />
+          </div>
+          <Link className="validation" to="/">
+            VALIDER
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }

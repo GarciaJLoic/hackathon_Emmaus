@@ -1,0 +1,76 @@
+.backgroundHome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-image: url("../assets/backgroundConnect.svg");
+  background-size: cover;
+  width: 100vw;
+  height: 101vh;
+  margin-top: -1vh;
+  .blurHome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 101vh;
+    width: 100vw;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.18) 0%,
+      rgba(0, 0, 0, 0.18) 100%
+    );
+    backdrop-filter: blur(6px);
+    .logo {
+      width: 448px;
+      margin-top: 40px;
+      margin-bottom: 80px;
+    }
+    .blurConnection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.44);
+      box-shadow: 0px 4px 54px 30px rgba(0, 0, 0, 0.58);
+      border-radius: 28px;
+      width: 45vw;
+      height: 50vh;
+      .connectionTitre {
+        margin-bottom: 20px;
+        width: 31vw;
+      }
+      .identification {
+        .nomInput {
+          color: #ffffff;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+        .enterInput {
+          width: 31vw;
+          height: 3vh;
+          margin-bottom: 15px;
+        }
+      }
+      .validation {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        font-weight: 700;
+        margin-top: 25px;
+        width: 92px;
+        height: 27px;
+        border-radius: 20px;
+        background-color: #000000;
+        color: #ffffff;
+        border-style: solid;
+        border-color: #ffffff;
+      }
+      .validation:hover {
+        border-color: #00acb0;
+        color: #00acb0;
+      }
+    }
+  }
+}
