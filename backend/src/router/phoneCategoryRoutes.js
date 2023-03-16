@@ -7,6 +7,6 @@ const {
 const router = express.Router();
 
 router.get("/", getPhoneCategory);
-router.put("/update", modifiedPhoneCategory);
+router.put("/update/:id", modifiedPhoneCategory);
 
 module.exports = router;

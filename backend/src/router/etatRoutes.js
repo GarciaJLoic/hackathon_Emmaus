@@ -1,9 +1,16 @@
 const express = require("express");
-const { getEtat, modifiedEtat } = require("../controller/etatControllers");
+const {
+  getEtat,
+  modifiedEtat,
+  addEtat,
+  deleteEtat,
+} = require("../controller/etatControllers");
 
 const router = express.Router();
 
 router.get("/", getEtat);
-router.put("/update", modifiedEtat);
+router.post("/post", addEtat);
+router.put("/update/:id", modifiedEtat);
+router.delete("/delete/:id", deleteEtat);
 
 module.exports = router;

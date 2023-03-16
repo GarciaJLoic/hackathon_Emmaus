@@ -5,7 +5,7 @@ const {
 
 const getPhoneCategory = async (req, res) => {
   try {
-    const phoneCategory = await findPhoneCategory();
+    const [phoneCategory] = await findPhoneCategory();
     res.json(phoneCategory);
   } catch (error) {
     console.error(error);
@@ -14,8 +14,9 @@ const getPhoneCategory = async (req, res) => {
 
 const modifiedPhoneCategory = async (req, res) => {
   const modification = req.body;
+  const modifparam = req.params.id;
   try {
-    updatePhoneCategory(modification);
+    updatePhoneCategory(modification, modifparam);
     res.sendStatus(200);
   } catch (error) {
     console.error(error);
