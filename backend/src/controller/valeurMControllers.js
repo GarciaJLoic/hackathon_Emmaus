@@ -6,8 +6,8 @@ const {
 
 const getValeurM = async (req, res) => {
   try {
-    const [ValeurM] = await findValeurM();
-    res.json(ValeurM);
+    const [valeurM] = await findValeurM();
+    res.json(valeurM);
   } catch (error) {
     console.error(error);
   }

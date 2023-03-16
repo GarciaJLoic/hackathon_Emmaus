@@ -5,7 +5,7 @@ const {
 
 const getAllConfigMini = async (req, res) => {
   try {
-    const configmini = await findAllConfigMini();
+    const [configmini] = await findAllConfigMini();
     res.json(configmini);
   } catch (error) {
     console.error(error);
@@ -22,7 +22,18 @@ const modifiedConfigMini = async (req, res) => {
   }
 };
 
+// const createNewConfigMini = async (req, res) => {
+//   const newConfigMini = req.body;
+//   try {
+//     addNewConfigMini(newConfigMini);
+//     res.sendStatus(200);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
+
 module.exports = {
   getAllConfigMini,
   modifiedConfigMini,
+  // createNewConfigMini,
 };
