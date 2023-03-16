@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
+import Header from "../components/Header";
 import MatérielTitre from "../assets/MatérielTitre.svg";
 
 function Ajout1() {
@@ -85,6 +86,7 @@ function Ajout1() {
 
   return (
     <div>
+      <Header />
       <div className="backgroundAjout1" />
       <div className="titleAjout1">
         <img
