@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Ajout1 from "./pages/Ajout1";
-import Header from "./components/Header";
+import Materiel from "./pages/Ajout02";
 
 import "./styles/App.scss";
 
@@ -21,7 +21,7 @@ function App() {
             </div>
           }
         /> */}
-        <Route path="/header" element={<Header />} />
+        <Route path="/Materiel02" element={<Materiel />} />
       </Routes>
     </div>
   );
