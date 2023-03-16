@@ -1,7 +1,88 @@
 import { Link } from "react-router-dom";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+
 import MatérielTitre from "../assets/MatérielTitre.svg";
 
 function Ajout1() {
+  const [stockageBDD, setStockageBDD] = useState();
+  const [memoireBDD, setMemoireBDD] = useState();
+  const [ponderationBDD, setPonderationBDD] = useState();
+  const [antutuBDD, setAntutuBDD] = useState();
+  const [categorisationBDD, setCategorisationBDD] = useState();
+  const [stockageUser, setStockageUser] = useState();
+  const [memoireUser, setMemoireUser] = useState();
+  const [ponderationUser, setPonderationUser] = useState();
+  const [antutuUser, setAntutuUser] = useState(0);
+  const [resultat, setResultat] = useState();
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/api/valeurs`)
+      .then((response) => response.data)
+      .then((data) => setStockageBDD(data));
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/api/valeurm`)
+      .then((response) => response.data)
+      .then((data) => setMemoireBDD(data));
+  }, []);
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/api/ponderation`)
+      .then((response) => response.data)
+      .then((data) => setPonderationBDD(data));
+  }, []);
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/api/valeura`)
+      .then((response) => response.data)
+      .then((data) => setAntutuBDD(data));
+  }, []);
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/api/phonecategory`)
+      .then((response) => response.data)
+      .then((data) => setCategorisationBDD(data));
+  }, []);
+
+  const sum = (antutu, memoire, stockage, ponde) => {
+    const [valA] = antutuBDD.filter(
+      (e) => antutu >= e.antutuMin && antutu <= e.antutuMax
+    );
+    const [valM] = memoireBDD.filter((e) => parseInt(memoire, 10) === e.mem);
+    const [valS] = stockageBDD.filter(
+      (e) => parseInt(stockage, 10) === e.stockage
+    );
+    let total;
+    if (valA && valM && valS) {
+      total = valA.valeur_a + valM.valeur_m + valS.valeur_s;
+    } else {
+      total = 0;
+    }
+    const totalPondere = total + (ponde / 100) * total;
+
+    const [result] = categorisationBDD.filter(
+      (e) => totalPondere >= e.valTotaleMin && totalPondere <= e.valTotaleMax
+    );
+
+    return result?.nomCategorie;
+  };
+  useEffect(() => {
+    if (
+      stockageBDD &&
+      memoireBDD &&
+      ponderationBDD &&
+      antutuBDD &&
+      categorisationBDD
+    ) {
+      setResultat(sum(antutuUser, memoireUser, stockageUser, ponderationUser));
+    }
+  }, [antutuUser, memoireUser, stockageUser, ponderationUser]);
+
   return (
     <div>
       <div className="backgroundAjout1" />
@@ -14,42 +95,60 @@ function Ajout1() {
       </div>
       <div className="bgInputAjout1">
         <h1 className="inputTitleAjout1">Taille de stockage :</h1>
-        <select className="stockage">
-          <option value="16GB">16GB</option>
-          <option value="32GB">32GB</option>
-          <option value="64GB">64GB</option>
-          <option value="128GB">128GB</option>
-          <option value="256GB">256GB</option>
-          <option value="512GB">512GB</option>
+        <select
+          className="stockage"
+          onChange={(e) => setStockageUser(e.target.value)}
+        >
+          <option value="0">--Choisissez--</option>
+          {stockageBDD?.map((e) => (
+            <option value={e.stockage} key={e.stockage}>
+              {e.stockage}GB
+            </option>
+          ))}
         </select>
         <h1 className="inputTitleAjout2">RAM :</h1>
-        <select className="RAM">
-          <option value="1GB">1GB</option>
-          <option value="2GB">2GB</option>
-          <option value="3GB">3GB</option>
-          <option value="4GB">4GB</option>
-          <option value="6GB">6GB</option>
-          <option value="8GB">8GB</option>
-          <option value="12GB">12GB</option>
-          <option value="16GB">16GB</option>
+        <select
+          className="RAM"
+          onChange={(e) => setMemoireUser(e.target.value)}
+        >
+          <option value="0">--Choisissez--</option>
+          {memoireBDD?.map((e) => (
+            <option value={e.mem} key={e.mem}>
+              {e.mem}GB
+            </option>
+          ))}
         </select>
         <h1 className="inputTitleAjout3">Indice Antutu :</h1>
-        <select className="antutu">
-          <option value="10000">10000</option>
-          <option value="20000">20000</option>
-          <option value="30000">30000</option>
-          <option value="40000">40000</option>
-        </select>
+        <input
+          value={antutuUser}
+          className="antutu"
+          type="text"
+          placeholder="Antutu"
+          onChange={(e) => setAntutuUser(e.target.value)}
+        />
         <h1 className="inputTitleAjout4">Pondération :</h1>
-        <select className="pondération">
-          <option value="1">-100%</option>
-          <option value="2">-50%</option>
-          <option value="3">-10%</option>
-          <option value="4">-5%</option>
-          <option value="4">0%</option>
-          <option value="4">5%</option>
-          <option value="4">10%</option>
+        <select
+          className="pondération"
+          onChange={(e) => setPonderationUser(e.target.value)}
+        >
+          <option value="0">--Choisissez--</option>
+          {ponderationBDD?.map((e) => (
+            <option value={e.valeurPonderation} key={e.valeurPonderation}>
+              {e.valeurPonderation}%
+            </option>
+          ))}
         </select>
+        <div className="grade">
+          <h1 className="gradeTitle">Grade du téléphone :</h1>
+          <h1 className="gradeResult">{resultat || ". . ."}</h1>
+          <h3 className="lienUtile">
+            <Link className to="https://www.antutu.com">
+              <i>Lien utile : https://www.antutu.com</i>
+            </Link>
+          </h3>
+        </div>
+      </div>
+      <div className="boutonAjout1">
         <Link className="validerAjout1" to="/">
           VALIDER
         </Link>
