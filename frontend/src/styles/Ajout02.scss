@@ -1,0 +1,62 @@
+.backgroundTableauMateriel {
+  background-image: url("../assets/background.svg");
+  height: 100vh;
+  width: 100vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .Title {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    margin-bottom: 10px;
+  }
+  .Tableau {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(12px);
+    width: 1200px;
+    height: 520px;
+    border-radius: 30px;
+    .option {
+      margin-right: 0px;
+      .nomOption {
+        color: white;
+        font-weight: bold;
+        width: 10vw;
+      }
+      .selectInfo {
+        background-color: #b0b0b0;
+        height: 20px;
+        border: solid 1px #8a8a8a;
+      }
+    }
+  }
+  .tableTableau > div {
+    display: inline-block;
+    width: 14%;
+    margin: 20px;
+    margin-right: 10px;
+    margin-left: 27px;
+    margin-top: 22px;
+  }
+  .tableTableau > div:nth-child(5n) {
+    // margin: 20px;
+  }
+  .buttonAjouter {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 30px;
+    border: 2px solid #ffffff;
+    width: 150px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    text-decoration: none;
+  }
+}
