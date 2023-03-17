@@ -2,6 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import TableauAntutuEtc from "@components/TableauAntutuEtc.jsx";
 import Home from "./pages/Home";
 import Ajout1 from "./pages/Ajout1";
+import Materiel from "./pages/Ajout02";
+import Admin from "./pages/Admin";
 
 import "./styles/App.scss";
 
@@ -21,6 +23,8 @@ function App() {
             </div>
           }
         /> */}
+        <Route path="/Materiel02" element={<Materiel />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </div>
   );

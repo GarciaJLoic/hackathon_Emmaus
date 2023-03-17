@@ -1,9 +1,12 @@
 require("dotenv").config();
+
 const express = require("express");
+const cors = require("cors");
 const router = require("./src/router");
 
 const cors = require('cors')
 const app = express();
+app.use(cors("http://localhost:5173/%27"));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
