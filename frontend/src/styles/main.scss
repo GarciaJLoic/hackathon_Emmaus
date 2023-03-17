@@ -2,6 +2,8 @@
 @import "./Home.scss";
 @import "./Header.scss";
 @import "./Ajout1.scss";
+@import "./Modal.scss";
+@import "./Antutu.scss";
 @import "./Ajout02.scss";
 @import "./Categorisation.scss";
 @import "./Admin.scss";
@@ -10,4 +12,9 @@
 
 :root {
   --font1: "Montserrat", sans-serif;
+}
+body {
+  margin: 0;
+  font-family: var(--font1);
+  overflow: hidden;
 }
