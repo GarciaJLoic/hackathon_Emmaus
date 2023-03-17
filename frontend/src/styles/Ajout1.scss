@@ -17,7 +17,7 @@
 .titreAjout1 {
   position: absolute;
   text-align: center;
-  top: -800px;
+  top: -900px;
 }
 
 .bgInputAjout1 {
@@ -29,34 +29,37 @@
   width: 35vw;
   height: 60vh;
   border-radius: 20px;
-  filter: opacity(90%);
+  opacity: 0.8;
   position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(92%, -135%);
+  z-index: 200;
 }
 
 .inputTitleAjout1 {
   position: absolute;
-  top: 10%;
+  top: 0%;
   left: 50%;
   transform: translate(-50%, 35%);
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 1.5rem;
 }
 
 .stockage {
   position: absolute;
-  top: 18%;
+  text-align: center;
+  top: 8%;
   left: 50%;
+  width: 15vw;
   transform: translate(-50%, 35%);
   color: rgb(0, 0, 0);
   font-size: 1.5rem;
+  border-radius: 3px;
+  background-color: rgb(255, 255, 255);
 }
 
 .inputTitleAjout2 {
   position: absolute;
-  top: 25%;
+  top: 13%;
   left: 50%;
   transform: translate(-50%, 35%);
   color: rgb(255, 255, 255);
@@ -65,16 +68,18 @@
 
 .RAM {
   position: absolute;
-  top: 33%;
+  text-align: center;
+  top: 21%;
   left: 50%;
   transform: translate(-50%, 35%);
   color: rgb(0, 0, 0);
   font-size: 1.5rem;
+  border-radius: 3px;
 }
 
 .inputTitleAjout3 {
   position: absolute;
-  top: 40%;
+  top: 26%;
   left: 50%;
   transform: translate(-50%, 35%);
   color: white;
@@ -83,16 +88,19 @@
 
 .antutu {
   position: absolute;
-  top: 48%;
+  text-align: center;
+  top: 34%;
   left: 50%;
+  height: 1.7rem;
   transform: translate(-50%, 35%);
   color: rgb(0, 0, 0);
   font-size: 1.5rem;
+  border-radius: 3px;
 }
 
 .inputTitleAjout4 {
   position: absolute;
-  top: 55%;
+  top: 39%;
   left: 50%;
   transform: translate(-50%, 35%);
   color: white;
@@ -101,11 +109,78 @@
 
 .pondération {
   position: absolute;
-  top: 63%;
+  text-align: center;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, 35%);
   color: rgb(0, 0, 0);
   font-size: 1.5rem;
+  border-radius: 3px;
+}
+
+.boutonAjout1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(0%, -150%);
+}
+
+.bgInputAjout1 input,
+.bgInputAjout1 select {
+  border: 0;
+  width: 15vw;
+}
+
+.grade {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gradeTitle {
+  margin: 0;
+  padding: 0;
+  width: 450px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  transform: translate(0%, 630%);
+  color: #ffffff;
+  font-size: 1.5rem;
+  z-index: 500;
+  font-weight: 800;
+}
+
+.gradeResult {
+  margin: 0;
+  padding: 0;
+  width: 265px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  transform: translate(0%, 180%);
+  color: #fecc38;
+  font-size: 5rem;
+  border: solid 5px #ffffff;
+  border-radius: 5px;
+  z-index: 500;
+}
+
+.lienUtile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(0%, 870%);
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+}
+
+.lienUtile a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 
 .validerAjout1 {
@@ -115,18 +190,18 @@
   align-items: center;
   text-decoration: none;
   font-weight: 700;
-  margin-top: 25px;
-  margin-bottom: -660px;
-  width: 150px;
-  height: 40px;
-  border-radius: 20px;
+  width: 200px;
+  height: 50px;
+  margin-top: -285px;
+  border-radius: 30px;
   background-color: #000000;
   color: #ffffff;
   border-style: solid;
   border-color: #ffffff;
   z-index: 1000;
 }
+
 .validerAjout1:hover {
-  border-color: #00acb0;
-  color: #00acb0;
+  border-color: #fecc38;
+  color: #fecc38;
 }
