@@ -6,7 +6,7 @@ const router = require("./src/router");
 
 // const cors = require('cors')
 const app = express();
-app.use(cors("http://localhost:5173/"));
+app.use(cors("http://localhost:5173"));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

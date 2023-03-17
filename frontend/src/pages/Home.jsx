@@ -6,14 +6,14 @@ export default function Home() {
   const [identifiant, setIdentifiant] = useState("");
   const [mdp, setMdp] = useState("");
 
-  // const login = () => {
-  //   if (identifiant === "Marc" && mdp === "emmaus123") {
-  //     window.location = "/ajout1";
-  //   } else {
-  //     setIdentifiant("");
-  //     setMdp("");
-  //   }
-  // };
+  const login = () => {
+    if (identifiant === "Marc" && mdp === "emmaus123") {
+      window.location = "/ajout1";
+    } else {
+      setIdentifiant("");
+      setMdp("");
+    }
+  };
 
   return (
     <div className="backgroundHome">
@@ -43,10 +43,10 @@ export default function Home() {
               value={mdp || ""}
             />
           </div>
-          {/* <p className="validation" onClick={(e) => login(e)}>
+          <p className="validation" onClick={(e) => login(e)}>
             {" "}
             Valider
-          </p> */}
+          </p>
         </div>
       </div>
     </div>
