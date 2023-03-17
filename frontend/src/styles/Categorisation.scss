@@ -1,0 +1,85 @@
+.categorisation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #00000085;
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  width: 80vw;
+  height: 60vh;
+  .titre {
+    margin: 30px;
+    color: white;
+    font-weight: 500;
+  }
+  .tableCateg {
+    margin-top: 50px;
+    display: flex;
+    .tableColonne {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .titreColonne {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        align-items: center;
+        width: 15vw;
+        height: 2.5vw;
+        border: solid 1px black;
+        margin-bottom: 0;
+      }
+      .inputCateg {
+        color: black;
+        width: 14.7vw;
+        height: 1.5vw;
+        border: solid 2px black;
+        text-align: center;
+        font-weight: 700;
+      }
+      #categ1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #26bcec;
+      }
+      #categ2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #00ff75;
+      }
+      #categ3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff500;
+      }
+      #categ4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ff6b00;
+      }
+      #categ5 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ff0000;
+      }
+    }
+  }
+  .buttonAjouter {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 30px;
+    border: 2px solid #ffffff;
+    width: 150px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    text-decoration: none;
+  }
+}
