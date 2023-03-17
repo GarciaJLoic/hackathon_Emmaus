@@ -1,0 +1,83 @@
+.dispoTableau {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+
+  h2 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    font-size: large;
+  }
+
+  p {
+    margin: 2px;
+  }
+
+  .tableauAntutu {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid black;
+
+    .titreColonne {
+      font-size: small;
+      font-weight: bold;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .pAntutu {
+      width: 40%;
+    }
+
+    input {
+      width: 7%;
+      margin-right: 0.5em;
+    }
+  }
+
+  .tableauRam {
+    width: 15%;
+    border: 1px solid black;
+
+    .titreColonne {
+      font-size: small;
+      font-weight: bold;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    input {
+      width: 40%;
+      margin: 0.5em;
+    }
+  }
+
+  .tableauDrive {
+    width: 15%;
+    border: 1px solid black;
+
+    .titreColonne {
+      font-size: small;
+      font-weight: bold;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    input {
+      width: 40%;
+      margin: 0.5em;
+    }
+  }
+}
+
+.ligneAntutu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // width: 40%;
+}

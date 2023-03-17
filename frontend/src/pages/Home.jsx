@@ -21,7 +21,7 @@ export default function Home() {
             <p className="nomInput">Mot de passe :</p>
             <input type="password" className="enterInput" />
           </div>
-          <Link className="validation" to="/">
+          <Link className="validation" to="/tableauantutu">
             VALIDER
           </Link>
         </div>
