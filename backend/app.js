@@ -1,4 +1,3 @@
-const cors = require("cors");
 require("dotenv").config();
 
 const express = require("express");
@@ -26,7 +25,6 @@ app.use(
   })
 );
 
-app.use(cors(`http://localhost:5173`));
 app.use("/api", router);
 
 app.get("*", (req, res) => {

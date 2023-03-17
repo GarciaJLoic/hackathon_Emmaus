@@ -8,6 +8,7 @@ function ConfigMini() {
   const [stockage, setStockage] = useState();
   const [ecran, setEcran] = useState();
   const [reseau, setReseau] = useState();
+  const [ajout, setAjout] = useState(false);
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}/api/configmini`)
@@ -39,6 +40,7 @@ function ConfigMini() {
       .catch((error) => {
         console.error(error.response.data.validationErrors);
       });
+    setAjout((prev) => !prev);
   };
 
   return (
@@ -96,6 +98,7 @@ function ConfigMini() {
       >
         METTRE À JOUR
       </button>
+      <p className="poulet01">{ajout ? "mise à jour faite" : ""}</p>
     </div>
   );
 }

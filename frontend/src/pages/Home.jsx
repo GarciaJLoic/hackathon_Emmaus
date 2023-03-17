@@ -8,7 +8,7 @@ export default function Home() {
 
   const login = () => {
     if (identifiant === "Marc" && mdp === "emmaus123") {
-      window.location = "/ajout1";
+      window.location = "/admin";
     } else {
       setIdentifiant("");
       setMdp("");
