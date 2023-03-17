@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Ajout1 from "./pages/Ajout1";
 import Materiel from "./pages/Ajout02";
+import Admin from "./pages/Admin";
 
 import "./styles/App.scss";
 
@@ -22,6 +23,7 @@ function App() {
           }
         /> */}
         <Route path="/Materiel02" element={<Materiel />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </div>
   );
