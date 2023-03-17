@@ -75,7 +75,7 @@ function TableauAntutuEtc() {
         <h2>Valeur_S</h2>
         <div className="titreColonne">
           <p>Stockage</p>
-          <p>Valeur M</p>
+          <p>Valeur S</p>
         </div>
         {valeurs
           ? valeurs.map((valeur) => (
