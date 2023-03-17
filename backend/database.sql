@@ -1,5 +1,3 @@
--- SQLBook: Code
-
 CREATE DATABASE  IF NOT EXISTS `hackaton3` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `hackaton3`;
 -- MySQL dump 10.13  Distrib 8.0.32, for Win64 (x86_64)
@@ -80,23 +78,23 @@ DROP TABLE IF EXISTS `phone`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `phone` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `remarque` varchar(150) NOT NULL,
+  `remarque` varchar(150) DEFAULT NULL,
   `maj` varchar(255) DEFAULT NULL,
-  `donateur` varchar(255) NOT NULL,
-  `idEmmaeusConnect` varchar(255) NOT NULL,
-  `typeDeMateriel` varchar(255) NOT NULL,
-  `categorie` varchar(45) NOT NULL,
-  `statut` varchar(45) NOT NULL,
-  `constructeur` varchar(45) NOT NULL,
+  `donateur` varchar(255) DEFAULT NULL,
+  `idEmmaeusConnect` varchar(255) DEFAULT NULL,
+  `typeDeMateriel` varchar(255) DEFAULT NULL,
+  `categorie` varchar(45) DEFAULT NULL,
+  `statut` varchar(45) DEFAULT NULL,
+  `constructeur` varchar(45) DEFAULT NULL,
   `infoBattery` varchar(45) DEFAULT NULL,
   `dateDeVente` date DEFAULT NULL,
   `observation` varchar(255) DEFAULT NULL,
   `gradeEsthetique` varchar(45) DEFAULT NULL,
   `serieEmei` varchar(255) DEFAULT NULL,
-  `processeur` int NOT NULL,
+  `processeur` int DEFAULT NULL,
   `os` varchar(255) DEFAULT NULL,
-  `storage` int NOT NULL,
-  `tailleEcran` varchar(45) NOT NULL,
+  `storage` int DEFAULT NULL,
+  `tailleEcran` varchar(45) DEFAULT NULL,
   `resolution` decimal(2,0) DEFAULT NULL,
   `chargeur` varchar(45) DEFAULT NULL,
   `operateur` varchar(255) DEFAULT NULL,
@@ -204,7 +202,7 @@ CREATE TABLE `valeur_a` (
   `antutuMax` int NOT NULL,
   `valeur_a` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -213,7 +211,7 @@ CREATE TABLE `valeur_a` (
 
 LOCK TABLES `valeur_a` WRITE;
 /*!40000 ALTER TABLE `valeur_a` DISABLE KEYS */;
-INSERT INTO `valeur_a` VALUES (1,0,50000,40),(2,50000,100000,44),(3,150000,200000,49);
+INSERT INTO `valeur_a` VALUES (1,0,50000,40),(2,50000,100000,44),(3,150000,200000,49),(4,200000,250000,54),(5,250000,300000,59),(6,350000,400000,64),(7,450000,500000,69),(8,500000,550000,74),(9,600000,650000,79),(10,700000,750000,84),(11,750000,800000,89),(12,800000,850000,94),(13,900000,950000,99);
 /*!40000 ALTER TABLE `valeur_a` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -276,5 +274,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-15 18:05:17
-
+-- Dump completed on 2023-03-17  9:22:32

@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { Link } from "react-router-dom";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import axios from "axios";
@@ -151,7 +152,7 @@ function Ajout1() {
         </div>
       </div>
       <div className="boutonAjout1">
-        <Link className="validerAjout1" to="/">
+        <Link className="validerAjout1" to="/Materiel02">
           VALIDER
         </Link>
       </div>
