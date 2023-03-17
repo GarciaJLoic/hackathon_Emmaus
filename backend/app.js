@@ -5,7 +5,7 @@ const cors = require("cors");
 const router = require("./src/router");
 
 const app = express();
-app.use(cors("http://localhost:5173/%27"));
+app.use(cors("http://localhost:5173"));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
