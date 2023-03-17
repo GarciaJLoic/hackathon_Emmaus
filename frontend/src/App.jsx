@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { Route, Routes } from "react-router-dom";
 import TableauAntutuEtc from "@components/TableauAntutuEtc.jsx";
 import Home from "./pages/Home";
