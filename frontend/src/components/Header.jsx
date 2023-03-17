@@ -22,7 +22,7 @@ export default function Home() {
       <img src={Logo} alt="logo" className="logo" />
       <div className="headerNoRight">
         <div className="headerRight">
-          <Link className="administration" to="/">
+          <Link className="administration" to="/connect">
             Administration
           </Link>
           <Link className="administration" to="/">

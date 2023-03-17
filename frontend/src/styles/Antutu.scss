@@ -1,8 +1,13 @@
 .dispoTableau {
+  margin-top: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  width: 100%;
+  width: 90%;
+  height: 50vh;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 30px;
 
   h2 {
     margin-top: 0.5em;
@@ -22,9 +27,8 @@
     justify-content: space-between;
     border: 1px solid black;
 
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(28, 128, 146, 0.4);
+    background-color: #00000093;
+    backdrop-filter: blur(10px);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
 
@@ -56,9 +60,8 @@
     width: 15%;
     border: 1px solid black;
 
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(28, 128, 146, 0.4);
+    background-color: #00000093;
+    backdrop-filter: blur(10px);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
 
@@ -79,9 +82,8 @@
     width: 15%;
     border: 1px solid black;
 
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(28, 128, 146, 0.4);
+    background-color: #00000093;
+    backdrop-filter: blur(10px);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
 
@@ -104,4 +106,8 @@
   flex-direction: row;
   justify-content: space-between;
   // width: 40%;
+}
+
+.poulet {
+  color: white;
 }

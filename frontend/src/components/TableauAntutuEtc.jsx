@@ -39,11 +39,11 @@ function TableauAntutuEtc() {
   return (
     <div className="dispoTableau">
       <div className="tableauAntutu">
-        <h2>Valeur_A</h2>
+        <h2 className="poulet">Valeur_A</h2>
         <div className="titreColonne">
-          <p>Antutu Min</p>
-          <p>Antutu Max</p>
-          <p>Valeur A</p>
+          <p className="poulet">Antutu Min</p>
+          <p className="poulet">Antutu Max</p>
+          <p className="poulet">Valeur A</p>
         </div>
         {valeura
           ? valeura.map((valeur) => (
@@ -59,10 +59,10 @@ function TableauAntutuEtc() {
         <button type="submit">Valider modification</button>
       </div>
       <div className="tableauRam">
-        <h2>Valeur_M</h2>
+        <h2 className="poulet">Valeur_M</h2>
         <div className="titreColonne">
-          <p>Ram</p>
-          <p>Valeur M</p>
+          <p className="poulet">Ram</p>
+          <p className="poulet">Valeur M</p>
         </div>
         {valeurm
           ? valeurm.map((valeur) => (
@@ -72,10 +72,10 @@ function TableauAntutuEtc() {
         <button type="submit">Valider modification</button>
       </div>
       <div className="tableauDrive">
-        <h2>Valeur_S</h2>
+        <h2 className="poulet">Valeur_S</h2>
         <div className="titreColonne">
-          <p>Stockage</p>
-          <p>Valeur S</p>
+          <p className="poulet">Stockage</p>
+          <p className="poulet">Valeur S</p>
         </div>
         {valeurs
           ? valeurs.map((valeur) => (
